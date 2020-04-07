@@ -13,14 +13,6 @@ public class DoublingDemo {
 
     long N = 10000000L;
 
-    public long interativeSum() {
-        long result = 0L;
-        for (long i = 1L; i <= N; i++) {
-            result += i;
-        }
-        return result;
-    }
-
     @Benchmark
     public long sequentialStreamSum() {
         return Stream.iterate(1L, i -> i + 1)
